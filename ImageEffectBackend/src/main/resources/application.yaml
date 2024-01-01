@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+url:
+  frontend: http://localhost:4200
+  backend: http://localhost:8000
+
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:h2:file:C:\Users\ASUS\Desktop\P2_2023_Test\P2-2023-Project\ImageDB
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
