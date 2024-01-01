@@ -15,7 +15,7 @@ spring:
       ddl-auto: update
 
   datasource:
-    url: jdbc:h2:file:C:\Users\ASUS\Desktop\P2_2023_Test\P2-2023-Project\ImageDB
+    url: jdbc:h2:file:C:\Users\ASUS\Desktop\Final_Submission_P2_Proj_23\P2_Proj_2023\ImageDB
     driverClassName: org.h2.Driver
     username: sa
     password:
