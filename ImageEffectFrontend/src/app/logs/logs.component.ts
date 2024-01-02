@@ -88,7 +88,7 @@ export class LogsComponent implements OnInit {
   // New function to load logs between timestamps
   loadLogsBetweenTimestamps() {
     if (this.startTime && this.endTime) {
-      this.logService.getLogsBetweenTimestamps(this.startTime, this.endTime)
+      this.logService.getLogsBetweenTimestamps(this.startTime, this.endTime, this.effectNameFilter)
         .pipe(
           catchError(
             (err: HttpErrorResponse) => {
