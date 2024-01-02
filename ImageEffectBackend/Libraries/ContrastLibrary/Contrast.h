@@ -5,4 +5,4 @@
 
 using namespace std;
 
-void contrast(vector< vector<Pixel> > *image, float amount);
+void contrast(vector< vector<Pixel> > &image, float amount);

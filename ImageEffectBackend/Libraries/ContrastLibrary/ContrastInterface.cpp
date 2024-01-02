@@ -44,7 +44,7 @@ JNIEXPORT jobjectArray JNICALL Java_libraryInterfaces_ContrastInterface_applyCon
         env->DeleteLocalRef(rowArray);
     }
 
-    contrast(&imageVector, amount);
+    contrast(imageVector, amount);
 
     int nrows = imageVector.size();
     int ncols = imageVector[0].size();

@@ -1,11 +1,12 @@
 #include <vector>
 #include "GaussianBlur.h"
-#include "../Pixel.h"
 #include <cmath>
 using namespace std;
 
 void blurpicture(vector<vector<Pixel>>& image, float amount) {
-    int kernelSize = (int)(amount/20);
+    int kernelSize = amount;
+    if(amount<=3) kernelSize =3;
+    else if(!amount&1) kernelSize=amount-1;
 
     int width = image[0].size();
     int height = image.size();
