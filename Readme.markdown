@@ -1,7 +1,4 @@
----
-title: "[]{#_jnkudaxb87ly .anchor}Programming-2 Project - Image Effects
-  Editor"
----
+# Programming-2 Project - Image Effects
 
 ## A web application to edit images using the following tech stack -
 
