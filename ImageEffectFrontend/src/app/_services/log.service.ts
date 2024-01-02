@@ -24,10 +24,11 @@ export class LogService {
     return this.http.delete(`${this.baseUrl}`, {responseType: "text"});
   }
 
-  getLogsBetweenTimestamps(startTime: string, endTime: string): Observable<LogModel[]> {
+  getLogsBetweenTimestamps(startTime: string, endTime: string, effectName: string): Observable<LogModel[]> {
     const params = new HttpParams()
       .set('startTime', startTime)
-      .set('endTime', endTime);
+      .set('endTime', endTime)
+      .set('effectName', effectName);
   
     return this.http.get<LogModel[]>(`${this.baseUrl}/between-timestamps`, { params });
   }
