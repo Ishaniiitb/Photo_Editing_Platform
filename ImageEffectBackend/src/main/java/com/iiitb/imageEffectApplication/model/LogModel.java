@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity     //Declaring Log Models as an Entity for this program as this is the data which we want to display to users
 public class LogModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

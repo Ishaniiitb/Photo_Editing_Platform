@@ -16,12 +16,14 @@ import java.util.List;
 @Service
 public class LoggingService {
 
+    //LogModelRepository to access the database and perform operations on the table present over there
     @Autowired
     LogModelRepository logModelRepository;
 
 
     public LoggingService() {}
 
+    //Function to add a log (a row) to the table to the H2 database
     public void addLog(String fileName, String effectName, String optionValues) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
@@ -31,19 +33,22 @@ public class LoggingService {
     }
 
 
-
+    //Function to fetch all the rows from the H2 database
     public List<LogModel> getAllLogs() {return logModelRepository.findAll();}
 
+    //Function to fetch all the rows of a specific filter from the H2 database
     public List<LogModel> getLogsByEffect(String effectName) {
         System.out.println(convertToTitleCaseIteratingChars(effectName));
         return logModelRepository.getLogModelByEffectName(convertToTitleCaseIteratingChars(effectName));
     }
 
+    //Clear the entire table
     public void clearLogs() {
         System.out.println("Deleting");
         logModelRepository.deleteAll();
     }
 
+    //Function to get all the rows between two specific time stamps from the H2 database
     public List<LogModel> getLogsBetweenTimestamps(LocalDateTime startTime, LocalDateTime endTime) {
         List<LogModel> allLogs = logModelRepository.findAll();
         List<LogModel> query = new ArrayList<>();
@@ -63,6 +68,7 @@ public class LoggingService {
         return query;
     }
 
+    //Function to generate the title case of a string
     public static String convertToTitleCaseIteratingChars(String text) {
         if (text == null || text.isEmpty()) {
             return text;
