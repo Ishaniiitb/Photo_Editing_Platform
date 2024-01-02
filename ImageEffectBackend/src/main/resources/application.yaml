@@ -5,6 +5,8 @@ url:
   frontend: http://localhost:4200
   backend: http://localhost:8000
 
+
+# This part in .yaml file is for the h2 JDBC connection establishment
 spring:
   jpa:
     show-sql: true
