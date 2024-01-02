@@ -9,16 +9,16 @@ import libraryInterfaces.Pixel;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class GrayScaleEffect implements PhotoEffect {
+public class GrayScaleEffect implements PhotoEffect {   //grayscale effect class that implements photo effect interface
 
     private LoggingService loggingService;
 
-    public LoggingService getLoggingService() {
+    public LoggingService getLoggingService() { //getter for logging service
         return this.loggingService;
     }
 
     @Override
-    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {
+    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {   //apply method
         System.out.println("Inside Gray Scale");
         Pixel[][] modifiedImage = GrayscaleInterface.applyGrayscale(image);
         this.loggingService = loggingService;

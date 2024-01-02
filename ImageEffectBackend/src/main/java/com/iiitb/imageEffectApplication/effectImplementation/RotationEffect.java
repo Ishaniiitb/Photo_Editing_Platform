@@ -6,21 +6,23 @@ import com.iiitb.imageEffectApplication.service.LoggingService;
 import libraryInterfaces.Pixel;
 import libraryInterfaces.RotationInterface;
 
-public class RotationEffect implements SingleValueDiscreteEffect {
+public class RotationEffect implements SingleValueDiscreteEffect {  //rotation effect class that implements single value discrete effect interface
     private LoggingService loggingService;
     private int amount;
 
-    public LoggingService getLoggingService() {
+    public LoggingService getLoggingService() { //getter for logging service
         return loggingService;
     }
 
     @Override
-    public void setParameterValue(int parameterValue) throws IllegalParameterException {
+    public void setParameterValue(int parameterValue) throws IllegalParameterException {    // set parameter value
+        if(parameterValue < 0 || parameterValue > 3) //if parameter value is not in range
+            throw new IllegalParameterException("Rotation parameter value outside the Range"); //throw exception
         this.amount = parameterValue;
     }
 
     @Override
-    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {
+    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {   //apply method
         System.out.println("Inside Rotation");
         Pixel[][] modifiedImage = RotationInterface.applyRotation(image, this.amount);
         this.loggingService = loggingService;

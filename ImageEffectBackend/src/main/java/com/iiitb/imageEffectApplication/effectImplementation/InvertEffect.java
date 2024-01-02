@@ -5,16 +5,16 @@ import com.iiitb.imageEffectApplication.service.LoggingService;
 import libraryInterfaces.InvertInterface;
 import libraryInterfaces.Pixel;
 
-public class InvertEffect implements PhotoEffect {
+public class InvertEffect implements PhotoEffect {  //invert effect class that implements photo effect interface
 
     private LoggingService loggingService;
 
-    public LoggingService getLoggingService() {
+    public LoggingService getLoggingService() { //getter for logging service
         return loggingService;
     }
 
     @Override
-    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {
+    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {   //apply method
         System.out.println("Inside invert");
         Pixel[][] modifiedImage = InvertInterface.applyInvert(image);
         this.loggingService = loggingService;

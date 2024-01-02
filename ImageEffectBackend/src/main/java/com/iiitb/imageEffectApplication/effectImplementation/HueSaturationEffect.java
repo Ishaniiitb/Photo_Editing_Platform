@@ -17,6 +17,7 @@ public class HueSaturationEffect implements DoubleValueParameterizableEffect {
 
     @Override
     public void setParameterValues(float parameterValue1, float parameterValue2) throws IllegalParameterException {
+        if()
         this.hue = parameterValue1;
         this.saturation = parameterValue2;
     }

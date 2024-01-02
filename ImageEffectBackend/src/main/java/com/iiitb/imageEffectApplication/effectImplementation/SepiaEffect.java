@@ -6,16 +6,16 @@ import libraryInterfaces.Pixel;
 import libraryInterfaces.SepiaInterface;
 
 
-public class SepiaEffect implements PhotoEffect {
+public class SepiaEffect implements PhotoEffect {   //sepia effect class that implements photo effect interface
 
     private LoggingService loggingService;
 
-    public LoggingService getLoggingService() {
+    public LoggingService getLoggingService() { //getter for logging service
         return loggingService;
     }
 
     @Override
-    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {
+    public Pixel[][] apply(Pixel[][] image, String fileName, LoggingService loggingService) {   //apply method
         System.out.println("Inside sepia");
         Pixel[][] modifiedImage = SepiaInterface.applySepia(image);
         this.loggingService = loggingService;
