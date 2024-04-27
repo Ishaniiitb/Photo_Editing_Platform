@@ -172,9 +172,9 @@ This rotates the image in 4 different angles.
 
     -   Dhruv Kothari (IMT2022114)
 
-    -   Nathan Mathew Verghese (IMT2022022)
-
     -   Ishan Jha (IMT2022562)
+
+    -   Nathan Mathew Verghese (IMT2022022)
 
 *4*.  **Photoservice**
 
